@@ -3,48 +3,44 @@ package paqueteMain;
 public class Main {
 	
 	public static void main(String args[]) {
-		System.out.println("Matrices");
+			
+		//Arreglos Dinamicos
 		
-		// matriz[fila][columna]
+		int calificaciones[][] = new int[5][];
 		
-		int matriz[][] = new int[4][3];
+		calificaciones[0] = new int[1]; //E
+		calificaciones[1] = new int[2]; //A
+		calificaciones[2] = new int[3]; //D
+		calificaciones[3] = new int[4]; //B
+		calificaciones[4] = new int[5]; //C
 		
-		matriz[0][0] = 1;
-		matriz[0][1] = 2;
-		matriz[0][2] = 3;
 		
-		/*matriz[1][0] = 1;
-		matriz[1][1] = 2;
-		matriz[1][2] = 3;
+		calificaciones[0][0] = 8;
 		
-		matriz[2][0] = 1;
-		matriz[2][1] = 2;
-		matriz[2][2] = 3;
+		calificaciones[1][0] = 9;
+		calificaciones[1][1] = 10;
 		
-		matriz[3][0] = 1;
-		matriz[3][1] = 2;
-		matriz[3][2] = 3;*/
+		calificaciones[2][0] = 11;
+		calificaciones[2][1] = 12;
+		calificaciones[2][2] = 13;
 		
-		//rellenar matriz
-		for(int fila = 0;fila < matriz.length;fila++) 
-			{
-				for(int colum = 0; colum< matriz[fila].length;colum++) 
-					{
-						matriz[fila][colum] = fila+1;
-					}
+		calificaciones[3][0] = 14;
+		calificaciones[3][1] = 15;
+		calificaciones[3][2] = 16;
+		calificaciones[3][3] = 17;
+		
+		calificaciones[4][0] = 18;
+		calificaciones[4][1] = 19;
+		calificaciones[4][2] = 20;
+		calificaciones[4][3] = 21;
+		calificaciones[4][4] = 22;
+		
+		for (int[] calificacionPorPesona : calificaciones) {
+			for (int calificacion : calificacionPorPesona) {
+				System.out.print(calificacion+" ");
 			}
-		
-		for(int fila = 0;fila < matriz.length;fila++) 
-			{
-				for(int colum = 0; colum< matriz[fila].length;colum++) 
-					{
-						System.out.println("Matriz["+fila+"]["+colum+"] = "+matriz[fila][colum]);
-					}
-			}
-		
-		
-		
-		
+			System.out.println();
+		}
 	}
 	
 }
